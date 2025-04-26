@@ -1,0 +1,65 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP server.
+    type: object
+    required: []
+    properties:
+      debug:
+        type: boolean
+        default: false
+        description: "Enable debug logging. Can also use patterns like 'controllers/*'."
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => {
+      // Setup environment variables based on provided config
+      const env = Object.assign({}, process.env);
+      if (config.debug) {
+        // Set DEBUG based on boolean or pass string pattern directly
+        env.DEBUG = typeof config.debug === 'string' ? config.debug : 'true';
+      }
+      // Ensure the command runs the built JS file
+      return { command: 'node', args: ['dist/index.js'], env };
+    }
+  exampleConfig:
+    # Example: Enable full debug logging
+    debug: true
+    # Example: Enable debug logging only for service layer
+    # debug: "services/*"
+
+# Define the tools provided by this MCP server
+tools:
+  - name: check-domain-availability
+    description: Checks the availability of one or more domain names using WHOIS lookups.
+    inputSchema:
+      type: object
+      required:
+        - domains
+      properties:
+        domains:
+          type: array
+          items:
+            type: string
+            minLength: 1
+            description: A domain name to check (e.g., 'example.com').
+          minItems: 1
+          description: An array of domain names to check for availability.
+    outputSchema:
+      type: object
+      required:
+        - available
+        - unavailable
+      properties:
+        available:
+          type: array
+          items:
+            type: string
+          description: List of domain names that appear to be available for registration.
+        unavailable:
+          type: array
+          items:
+            type: string
+          description: List of domain names that appear to be already registered.

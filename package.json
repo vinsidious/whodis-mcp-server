@@ -1,0 +1,136 @@
+{
+	"name": "whodis-mcp-server",
+	"version": "1.0.1",
+	"description": "Whodis MCP Server for checking the availability of domain names using WHOIS lookups.",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"type": "commonjs",
+	"author": "Vince Coppola <vincecoppola@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vinsidious/whodis-mcp-server.git"
+	},
+	"bin": {
+		"whodis-mcp-server": "./dist/index.js"
+	},
+	"scripts": {
+		"build": "tsc",
+		"prepare": "npm run build && chmod +x dist/index.js",
+		"postinstall": "chmod +x dist/index.js || true",
+		"test": "jest",
+		"test:coverage": "jest --coverage",
+		"lint": "eslint src --ext .ts --config eslint.config.mjs",
+		"format": "prettier --write 'src/**/*.ts' 'scripts/**/*.js'",
+		"publish:npm": "npm publish",
+		"update:check": "npx npm-check-updates",
+		"update:deps": "npx npm-check-updates -u && npm install --legacy-peer-deps",
+		"update:version": "node scripts/update-version.js",
+		"dev:server": "DEBUG=true npm run build && npx @modelcontextprotocol/inspector -e DEBUG=true node dist/index.js",
+		"dev:cli": "DEBUG=true npm run build && DEBUG=true node dist/index.js",
+		"start:server": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",
+		"start:cli": "npm run build && node dist/index.js"
+	},
+	"keywords": [
+		"mcp",
+		"typescript",
+		"domain",
+		"whois",
+		"domain-availability",
+		"domain-checker",
+		"server",
+		"model-context-protocol",
+		"tools",
+		"resources",
+		"tooling",
+		"ai-integration",
+		"mcp-server",
+		"llm",
+		"whodis",
+		"domain-search",
+		"cli",
+		"domain-lookup"
+	],
+	"license": "ISC",
+	"devDependencies": {
+		"@eslint/js": "^9.24.0",
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/exec": "^7.0.3",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/github": "^11.0.1",
+		"@semantic-release/npm": "^12.0.1",
+		"@types/jest": "^29.5.14",
+		"@types/node": "^22.14.0",
+		"@typescript-eslint/eslint-plugin": "^8.29.1",
+		"@typescript-eslint/parser": "^8.29.1",
+		"eslint": "^9.24.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-prettier": "^5.2.6",
+		"jest": "^29.7.0",
+		"nodemon": "^3.1.9",
+		"npm-check-updates": "^17.1.16",
+		"prettier": "^3.5.3",
+		"semantic-release": "^24.2.3",
+		"ts-jest": "^29.3.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.29.1"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.9.0",
+		"commander": "^13.1.0",
+		"dotenv": "^16.4.7",
+		"whoiser": "1.18.0",
+		"zod": "^3.24.2"
+	},
+	"directories": {
+		"example": "examples"
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "node",
+		"testMatch": [
+			"**/src/**/*.test.ts"
+		],
+		"collectCoverageFrom": [
+			"src/**/*.ts",
+			"!src/**/*.test.ts",
+			"!src/**/*.spec.ts"
+		],
+		"coveragePathIgnorePatterns": [
+			"/node_modules/",
+			"/dist/",
+			"/coverage/"
+		],
+		"coverageReporters": [
+			"text",
+			"lcov",
+			"json-summary"
+		],
+		"transform": {
+			"^.+\\.tsx?$": [
+				"ts-jest",
+				{
+					"useESM": true
+				}
+			]
+		},
+		"moduleNameMapper": {
+			"(.*)\\.(js|jsx)$": "$1"
+		},
+		"extensionsToTreatAsEsm": [
+			".ts"
+		],
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		]
+	}
+}
