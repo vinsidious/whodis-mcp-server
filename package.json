@@ -1,11 +1,17 @@
 {
 	"name": "whodis-mcp-server",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Whodis MCP Server for checking the availability of domain names using WHOIS lookups.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"type": "commonjs",
 	"author": "Vince Coppola <vincecoppola@gmail.com>",
+	"maintainers": [
+		{
+			"name": "Vince Coppola",
+			"email": "vincecoppola@gmail.com"
+		}
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/vinsidious/whodis-mcp-server.git"
@@ -132,5 +138,6 @@
 			"json",
 			"node"
 		]
-	}
+	},
+	"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
