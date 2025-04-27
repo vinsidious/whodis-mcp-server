@@ -1,6 +1,6 @@
 {
 	"name": "whodis-mcp-server",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Whodis MCP Server for checking the availability of domain names using WHOIS lookups.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

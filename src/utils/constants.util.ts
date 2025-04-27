@@ -10,7 +10,7 @@
  * This should match the version in package.json
  * Updated by semantic-release and the update-version script.
  */
-export const VERSION = '1.0.1';
+export const VERSION = '1.1.1';
 
 /**
  * Package name
