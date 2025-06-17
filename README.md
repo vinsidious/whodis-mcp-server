@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/vinsidious-whodis-mcp-server-badge.png)](https://mseep.ai/app/vinsidious-whodis-mcp-server)
+
 # Whodis MCP Server
 
 This project provides a Model Context Protocol (MCP) server specifically designed to check the availability of domain names using WHOIS lookups. It allows AI assistants or other tools to integrate domain availability checks into their workflows.
