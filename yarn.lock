@@ -1334,7 +1334,7 @@
     natural-compare "^1.4.0"
     ts-api-utils "^2.0.1"
 
-"@typescript-eslint/parser@8.31.0", "@typescript-eslint/parser@^8.29.1":
+"@typescript-eslint/parser@8.31.0":
   version "8.31.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-8.31.0.tgz#5ec28823d06dd20ed5f67b61224823f12ccde095"
   integrity sha512-67kYYShjBR0jNI5vsf/c3WG4u+zDnCTHTPqVMQguffaWWFs7artgwKmfwdifl+r6XyM5LYLas/dInj2T0SgJyw==
@@ -1345,6 +1345,26 @@
     "@typescript-eslint/visitor-keys" "8.31.0"
     debug "^4.3.4"
 
+"@typescript-eslint/parser@^8.29.1":
+  version "8.46.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-8.46.2.tgz#dd938d45d581ac8ffa9d8a418a50282b306f7ebf"
+  integrity sha512-BnOroVl1SgrPLywqxyqdJ4l3S2MsKVLDVxZvjI1Eoe8ev2r3kGDo+PcMihNmDE+6/KjkTubSJnmqGZZjQSBq/g==
+  dependencies:
+    "@typescript-eslint/scope-manager" "8.46.2"
+    "@typescript-eslint/types" "8.46.2"
+    "@typescript-eslint/typescript-estree" "8.46.2"
+    "@typescript-eslint/visitor-keys" "8.46.2"
+    debug "^4.3.4"
+
+"@typescript-eslint/project-service@8.46.2":
+  version "8.46.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/project-service/-/project-service-8.46.2.tgz#ab2f02a0de4da6a7eeb885af5e059be57819d608"
+  integrity sha512-PULOLZ9iqwI7hXcmL4fVfIsBi6AN9YxRc0frbvmg8f+4hQAjQ5GYNKK0DIArNo+rOKmR/iBYwkpBmnIwin4wBg==
+  dependencies:
+    "@typescript-eslint/tsconfig-utils" "^8.46.2"
+    "@typescript-eslint/types" "^8.46.2"
+    debug "^4.3.4"
+
 "@typescript-eslint/scope-manager@8.31.0":
   version "8.31.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-8.31.0.tgz#48c7f7d729ea038e36cae0ff511e48c2412fb11c"
@@ -1352,6 +1372,19 @@
   dependencies:
     "@typescript-eslint/types" "8.31.0"
     "@typescript-eslint/visitor-keys" "8.31.0"
+
+"@typescript-eslint/scope-manager@8.46.2":
+  version "8.46.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-8.46.2.tgz#7d37df2493c404450589acb3b5d0c69cc0670a88"
+  integrity sha512-LF4b/NmGvdWEHD2H4MsHD8ny6JpiVNDzrSZr3CsckEgCbAGZbYM4Cqxvi9L+WqDMT+51Ozy7lt2M+d0JLEuBqA==
+  dependencies:
+    "@typescript-eslint/types" "8.46.2"
+    "@typescript-eslint/visitor-keys" "8.46.2"
+
+"@typescript-eslint/tsconfig-utils@8.46.2", "@typescript-eslint/tsconfig-utils@^8.46.2":
+  version "8.46.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.46.2.tgz#d110451cb93bbd189865206ea37ef677c196828c"
+  integrity sha512-a7QH6fw4S57+F5y2FIxxSDyi5M4UfGF+Jl1bCGd7+L4KsaUY80GsiF/t0UoRFDHAguKlBaACWJRmdrc6Xfkkag==
 
 "@typescript-eslint/type-utils@8.31.0":
   version "8.31.0"
@@ -1368,6 +1401,11 @@
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-8.31.0.tgz#c48e20ec47a43b72747714f49ea9f7b38a4fa6c1"
   integrity sha512-Ch8oSjVyYyJxPQk8pMiP2FFGYatqXQfQIaMp+TpuuLlDachRWpUAeEu1u9B/v/8LToehUIWyiKcA/w5hUFRKuQ==
 
+"@typescript-eslint/types@8.46.2", "@typescript-eslint/types@^8.46.2":
+  version "8.46.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-8.46.2.tgz#2bad7348511b31e6e42579820e62b73145635763"
+  integrity sha512-lNCWCbq7rpg7qDsQrd3D6NyWYu+gkTENkG5IKYhUIcxSb59SQC/hEQ+MrG4sTgBVghTonNWq42bA/d4yYumldQ==
+
 "@typescript-eslint/typescript-estree@8.31.0":
   version "8.31.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-8.31.0.tgz#9c7f84eff6ad23d63cf086c6e93af571cd561270"
@@ -1381,6 +1419,22 @@
     minimatch "^9.0.4"
     semver "^7.6.0"
     ts-api-utils "^2.0.1"
+
+"@typescript-eslint/typescript-estree@8.46.2":
+  version "8.46.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-8.46.2.tgz#ab547a27e4222bb6a3281cb7e98705272e2c7d08"
+  integrity sha512-f7rW7LJ2b7Uh2EiQ+7sza6RDZnajbNbemn54Ob6fRwQbgcIn+GWfyuHDHRYgRoZu1P4AayVScrRW+YfbTvPQoQ==
+  dependencies:
+    "@typescript-eslint/project-service" "8.46.2"
+    "@typescript-eslint/tsconfig-utils" "8.46.2"
+    "@typescript-eslint/types" "8.46.2"
+    "@typescript-eslint/visitor-keys" "8.46.2"
+    debug "^4.3.4"
+    fast-glob "^3.3.2"
+    is-glob "^4.0.3"
+    minimatch "^9.0.4"
+    semver "^7.6.0"
+    ts-api-utils "^2.1.0"
 
 "@typescript-eslint/utils@8.31.0":
   version "8.31.0"
@@ -1399,6 +1453,14 @@
   dependencies:
     "@typescript-eslint/types" "8.31.0"
     eslint-visitor-keys "^4.2.0"
+
+"@typescript-eslint/visitor-keys@8.46.2":
+  version "8.46.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-8.46.2.tgz#803fa298948c39acf810af21bdce6f8babfa9738"
+  integrity sha512-tUFMXI4gxzzMXt4xpGJEsBsTox0XbNQ1y94EwlD/CuZwFcQP79xfQqMhau9HsRc/J0cAPA/HZt1dZPtGn9V/7w==
+  dependencies:
+    "@typescript-eslint/types" "8.46.2"
+    eslint-visitor-keys "^4.2.1"
 
 abbrev@^3.0.0:
   version "3.0.1"
@@ -2357,6 +2419,11 @@ eslint-visitor-keys@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-4.2.0.tgz#687bacb2af884fcdda8a6e7d65c606f46a14cd45"
   integrity sha512-UyLnSehNt62FFhSwjZlHmeokpRK59rcz29j+F1/aDgbkbRTk7wIc9XzdoasMUbRNKDM0qQt/+BJ4BrpFeABemw==
+
+eslint-visitor-keys@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-4.2.1.tgz#4cfea60fe7dd0ad8e816e1ed026c1d5251b512c1"
+  integrity sha512-Uhdk5sfqcee/9H/rCOJikYz67o0a2Tw2hGRPOG2Y1R2dg7brRe1uG0yaNQDHu+TO/uQPF/5eCapvYSmHUjt7JQ==
 
 eslint@^9.24.0:
   version "9.25.1"
@@ -5863,7 +5930,7 @@ treeverse@^3.0.0:
   resolved "https://registry.yarnpkg.com/treeverse/-/treeverse-3.0.0.tgz#dd82de9eb602115c6ebd77a574aae67003cb48c8"
   integrity sha512-gcANaAnd2QDZFmHFEOF4k7uc1J/6a6z3DJMd/QwEyxLoKGiptJRwid582r7QIsFlFMIZ3SnxfS52S4hm2DHkuQ==
 
-ts-api-utils@^2.0.1:
+ts-api-utils@^2.0.1, ts-api-utils@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-2.1.0.tgz#595f7094e46eed364c13fd23e75f9513d29baf91"
   integrity sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ==
